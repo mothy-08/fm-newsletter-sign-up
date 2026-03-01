@@ -3,45 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="styles.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
-    <header class="sr-only">
-      <h1>Newsletter Sign-up Form</h1>
-    </header>
-
     <main>
-      <article
+      <section
         aria-labelledby="sign-up-heading"
         id="sign-up-card"
         class="sign-up-card"
-        data-active="true"
       >
-        <!-- just a design. not a semantic img -->
         <div class="image-design" aria-hidden="true"></div>
 
         <div class="content">
-          <h2 id="sign-up-heading" class="sign-up-heading">Stay updated!</h2>
+          <h1 id="sign-up-heading" class="sign-up-heading">Stay updated!</h1>
 
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
@@ -51,7 +41,7 @@
             <li>And much more!</li>
           </ul>
 
-          <form id="form" action="">
+          <form id="form" novalidate>
             <div class="label-wrapper">
               <label for="email">Email address</label>
               <span
@@ -68,35 +58,29 @@
               name="email"
               id="email"
               placeholder="email@company.com"
-              aria-required="true"
+              aria-describedby="error-message"
               required
             />
-            <button
-              type="submit"
-              id="subscribe-button"
-              class="subscribe-button"
-              disabled
-            >
-              Subscribe to monthly newsletter
-            </button>
+            <button type="submit">Subscribe to monthly newsletter</button>
           </form>
         </div>
-      </article>
+      </section>
 
-      <article
+      <section
         aria-labelledby="success-heading"
-        data-active="false"
         id="success-card"
         class="success-card"
+        hidden
       >
         <div class="success-image" aria-hidden="true"></div>
-        <h2 class="success-heading" id="success-heading">
+        <h1 class="success-heading" id="success-heading">
           Thanks for subscribing!
-        </h2>
-        <!-- dynamic message -->
+        </h1>
         <p id="success-card-message"></p>
-        <button type="button">Dismiss message</button>
-      </article>
+        <button type="button" aria-label="Dismiss success message">
+          Dismiss message
+        </button>
+      </section>
     </main>
   </body>
 </html>

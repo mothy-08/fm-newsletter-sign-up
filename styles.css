@@ -27,18 +27,9 @@ svg {
   max-width: 100%;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+[hidden] {
+  display: none !important;
 }
-
 body {
   background-color: var(--color-blue-700);
   font-family: "Roboto", sans-serif;
@@ -87,7 +78,7 @@ main {
   margin-top: 1.5rem;
 }
 
-h2 {
+h1 {
   font-size: var(--fluid-heading);
   font-weight: var(--font-bold);
 }
@@ -183,7 +174,7 @@ button {
   cursor: pointer;
 }
 
-button:not(:disabled):hover {
+button:hover {
   background: linear-gradient(
     to right,
     rgb(236, 96, 123),
@@ -191,16 +182,6 @@ button:not(:disabled):hover {
     rgb(237, 113, 75)
   );
   box-shadow: 0 16px 24px rgba(236, 105, 99, 0.5);
-}
-
-.subscribe-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.75;
-}
-
-.sign-up-card[data-active="false"],
-.success-card[data-active="false"] {
-  display: none;
 }
 
 .success-card {
