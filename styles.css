@@ -21,15 +21,10 @@
   line-height: calc(1em + 0.5rem);
 }
 
-img,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 [hidden] {
   display: none !important;
 }
+
 body {
   background-color: var(--color-blue-700);
   font-family: "Roboto", sans-serif;
